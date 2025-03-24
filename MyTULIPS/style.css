@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; /* Light background */
+    margin: 0;
+}
+
+.tulip {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    animation: sway 3s infinite alternate;
+}
+
+.petal {
+    position: absolute;
+    background-color: #800080; /* Purple color */
+    border-radius: 50%;
+    width: 40px;
+    height: 70px;
+    opacity: 0.8;
+}
+
+.petal1 {
+    top: 0;
+    left: 30%;
+    transform: rotate(-30deg);
+}
+
+.petal2 {
+    top: 0;
+    left: 0;
+    transform: rotate(30deg);
+}
+
+.petal3 {
+    top: 30px;
+    left: 20%;
+    transform: rotate(0deg);
+}
+
+.petal4 {
+    top: 30px;
+    left: 60%;
+    transform: rotate(0deg);
+}
+
+.stem {
+    position: absolute;
+    background-color: #4caf50; /* Green color for the stem */
+    width: 10px;
+    height: 100px;
+    bottom: 0;
+    left: 45%;
+    border-radius: 5px;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.caption {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #4a148c; /* Dark purple color */
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #6200ea; /* Purple button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+}
